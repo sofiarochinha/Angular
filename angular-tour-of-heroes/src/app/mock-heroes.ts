@@ -1,3 +1,5 @@
+//todos os heróis estam armazenados em um array baseado em hero.ts
+
 import { Hero } from './hero';
 
 export const HEROES: Hero[] = [

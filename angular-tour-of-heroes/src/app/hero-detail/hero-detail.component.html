@@ -1,10 +1,14 @@
-<div *ngIf="hero">
+<div *ngIf="hero"> <!--Só aparece se tiver um hero senão não acontece nada-->
 
   <h2>{{hero.name | uppercase}} Details</h2>
   <div><span>id: </span>{{hero.id}}</div>
   <div>
     <label for="hero-name">Hero name: </label>
     <input id="hero-name" [(ngModel)]="hero.name" placeholder="name"> <!--ngmodel is two way data binding-->
+    <!--[(ngModel)] = conecta o nome de hero ao valor que está a ser inserido-->
+    <!--para além de mudar o valor quando é mudado, ou seja, enquanto escreve-->
   </div>
+
+  <button (click)="goBack()">go back</button>
 
 </div>

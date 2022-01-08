@@ -1,9 +1,24 @@
+<!--
   <h2>My Heroes</h2>
   <ul class="heroes">
+    &lt;!&ndash;[class.selected]="hero === selectedHero" muda a class da tag para selectedHero quando o utilizador seleciona a tag
+      *ngFor="let hero of heroes" // cria várias componentes da mesma tag com informações do array
+    (click)="onSelect(hero)" //ao clicar na tag utiliza esta função
+    &ndash;&gt;
     <li [class.selected]="hero === selectedHero" *ngFor="let hero of heroes" (click)="onSelect(hero)">
       <span class="badge">{{hero.id}}</span> {{hero.name}}
     </li>
   </ul>
 
-  <app-hero-detail [hero]="selectedHero"></app-hero-detail> <!--It's a one way data binding from the selectedHero property of the HeroesComponent
-  to the hero property of the target element, which maps to the hero property of the HeroDetailComponent-->
+  &lt;!&ndash;introduz um dado na outra componente&ndash;&gt;
+  <app-hero-detail [hero]="selectedHero"></app-hero-detail> &lt;!&ndash;It's a one way data binding from the selectedHero property of the HeroesComponent
+  to the hero property of the target element, which maps to the hero property of the HeroDetailComponent&ndash;&gt;
+-->
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+  </li>
+</ul>
