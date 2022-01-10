@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Angular.iml" filepath="$PROJECT_DIR$/.idea/Angular.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/EDACrawler/.idea/EDACrawler.iml" filepath="$USER_HOME$/Downloads/EDACrawler/.idea/EDACrawler.iml" />
     </modules>
   </component>
 </project>

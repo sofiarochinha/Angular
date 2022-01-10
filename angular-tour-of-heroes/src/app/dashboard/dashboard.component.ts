@@ -17,7 +17,8 @@ export class DashboardComponent implements OnInit {
   }
 
   getHeroes(): void {
-    this.heroService.getHeroes()
+    this.heroService.getHeroes() //obtém todos os heróis a partir do serviço hero.service
       .subscribe(heroes => this.heroes = heroes.slice(1, 5));
+      //slice -> é uma cópia do array mas só do indíce 1 a 5
   }
 }
